@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Sophia | Portfolio</title>
+    <title>Sofia | Portfolio</title>
     <link rel="stylesheet" href="website.css" />
   </head>
 
@@ -14,12 +14,13 @@
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#home">About</a></li>
-        <li><a href="#home">Skills</a></li>
-        <li><a href="#home">Projects</a></li>
-        <li><a href="#home">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
     <section id="home">
       <div class="intro terminal">
         <p class="terminal-line">
@@ -32,10 +33,12 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-card">
         <p>
-          I’m Sofia, a passionate developer focused on building modern, fast and
-          beautiful web experiences. I enjoy turning ideas into clean,
-          functional and scalable digital products.
+          I’m Sofia Wanjiku — a front-end developer focused on building clean,
+          modern web interfaces with HTML, CSS, and JavaScript. I love creating
+          product-like UIs (iOS-inspired components, interactive apps) and I’m
+          currently growing into full-stack development.
         </p>
+
         <div class="about-stats">
           <div class="stat">
             <span class="stat-number">01+</span>
@@ -70,12 +73,13 @@
       <h2 class="section-title">Projects</h2>
 
       <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project-card">
           <h3>Personal Portfolio Website</h3>
           <p>
             Modern, clean portfolio to showcase my skills and projects. Built
-            with HTML, CSS, and JavaScript. Features responsive design and
-            subtle terminal/tech theme.
+            with HTML, CSS, and JavaScript. Features responsive design and a
+            terminal/tech theme.
           </p>
           <div class="tech-stack">
             <span>HTML</span>
@@ -83,8 +87,60 @@
             <span>JavaScript</span>
           </div>
           <div class="project-actions">
-            <a href="#" class="btn">View Live</a>
-            <a href="#" class="btn outline">View Code</a>
+            <a
+              href="https://smallsophie.github.io/My-Portfolio/"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+              >View Live</a
+            >
+            <a
+              href="https://github.com/Smallsophie/My-Portfolio"
+              class="btn outline"
+              target="_blank"
+              rel="noopener"
+              >View Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>iPhone-Style Calculator</h3>
+          <p>
+            A dark iOS-inspired calculator with clean UI and calculation history.
+            Built using JavaScript + DOM events.
+          </p>
+          <div class="tech-stack">
+            <span>JavaScript</span>
+            <span>DOM</span>
+            <span>UI</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn" target="_blank" rel="noopener">View Live</a>
+            <a href="#" class="btn outline" target="_blank" rel="noopener"
+              >View Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <h3>iPhone-Style Calendar</h3>
+          <p>
+            Calendar app with Month/Day/Week views, event colors, reminders UI,
+            and localStorage saving. Built with vanilla JavaScript.
+          </p>
+          <div class="tech-stack">
+            <span>JavaScript</span>
+            <span>localStorage</span>
+            <span>UI</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn" target="_blank" rel="noopener">View Live</a>
+            <a href="#" class="btn outline" target="_blank" rel="noopener"
+              >View Code</a
+            >
           </div>
         </div>
       </div>
@@ -96,6 +152,24 @@
       <div class="contact-panel">
         <p class="contact-text">
           Want to work together or just say hi? Send me a message 👇
+        </p>
+
+        <p class="contact-links">
+          Email:
+          <a href="mailto:sofiawanjikusmall@gmail.com">sofiawanjikusmall@gmail.com</a>
+          <br />
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/sofia-wanjiku-0104a7399/"
+            target="_blank"
+            rel="noopener"
+            >linkedin.com/in/sofia-wanjiku-0104a7399</a
+          >
+          <br />
+          GitHub:
+          <a href="https://github.com/Smallsophie" target="_blank" rel="noopener"
+            >github.com/Smallsophie</a
+          >
         </p>
 
         <div id="terminal-contact">
@@ -115,9 +189,18 @@
       <div class="footer-content">
         <p>© 2026 Sofia. All rights reserved.</p>
         <div class="social-links">
-          <a href="#" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#" target="_blank">Twitter</a>
+          <a href="https://github.com/Smallsophie" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/sofia-wanjiku-0104a7399/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://smallsophie.github.io/My-Portfolio/" target="_blank" rel="noopener"
+            >Portfolio</a
+          >
         </div>
       </div>
     </footer>
@@ -125,9 +208,9 @@
     <script>
       const introLines = [
         "Hi, I'm Sofia 👋",
-        "Full-Stack Developer | Web Designer",
+        "Front-End Developer | UI Builder",
         "Building responsive and modern websites",
-        "Passionate about coding, tech, and design",
+        "I design iOS-inspired interfaces with JavaScript",
         "I turn ideas into functional digital experiences",
       ];
 
@@ -136,32 +219,26 @@
 
       function showLine() {
         typedText.textContent = introLines[lineIndex];
-        lineIndex++;
-        if (lineIndex >= introLines.length) {
-          lineIndex = 0; // restart loop
-        }
-        setTimeout(showLine, 2000); // each line stays 2 seconds (adjustable)
+        lineIndex = (lineIndex + 1) % introLines.length;
+        setTimeout(showLine, 1800);
       }
-
       showLine();
     </script>
+
     <script>
       const form = document.getElementById("contact-form");
       const output = document.getElementById("contact-output");
 
       form.addEventListener("submit", function (e) {
-        e.preventDefault(); // prevent normal form submission
-
-        // Clear previous output
+        e.preventDefault();
         output.textContent = "";
 
-        // Fake terminal typing effect
         const messages = [
-          "Connecting to server...",
+          "Connecting...",
           "Sending message...",
           "Encrypting payload...",
           "Message sent ✓",
-          "Thanks! I will get back to you soon.",
+          "Thanks! I’ll get back to you soon.",
         ];
 
         let lineIndex = 0;
@@ -174,18 +251,16 @@
           if (charIndex < currentLine.length) {
             output.textContent += currentLine.charAt(charIndex);
             charIndex++;
-            setTimeout(typeLine, 40);
+            setTimeout(typeLine, 35);
           } else {
             output.textContent += "\n";
             lineIndex++;
             charIndex = 0;
-            setTimeout(typeLine, 300);
+            setTimeout(typeLine, 250);
           }
         }
 
         typeLine();
-
-        // Optionally, reset form after a short delay
         form.reset();
       });
     </script>
@@ -209,7 +284,6 @@
         });
       }
 
-      // Initial call + on scroll
       scrollProjects();
       window.addEventListener("scroll", scrollProjects);
     </script>
